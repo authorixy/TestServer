@@ -34,5 +34,5 @@ func main () {
 	http.HandleFunc("/", HelloHandler)
 	http.HandleFunc("/rank_list", RankListHandler)
 	http.HandleFunc("/upload_score", UploadScore)
-	http.ListenAndServe(":80", nil)
+	http.ListenAndServe(":10030", nil)
 }

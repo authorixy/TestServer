@@ -57,7 +57,7 @@ type UScore struct {
 
 func (d *DB) GetRankList() string {
 	d.m.RLock()
-	defer d.m.Unlock()
+	defer d.m.RUnlock()
 	scores := make([]UScore, 0, len(d.Scores))
 	for k, v := range d.Scores {
 		scores = append(scores, UScore{
